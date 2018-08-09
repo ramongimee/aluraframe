@@ -11,7 +11,9 @@ class NegociacaoController{
         this._negociacoesView.update(this._listaNegociacoes);
 
         this._mensagem = new Mensagem();
-        this._mensagemView = new MensagemView($('#mensagemView'));
+        this._mensagemView = new MensagemView($('#mensagemView'))
+
+        
         this._mensagemView.update(this._mensagem);
     }
 
@@ -25,6 +27,15 @@ class NegociacaoController{
         this._mensagemView.update(this._mensagem);
         
         this._limpaFormulario();
+    }
+
+    apaga(){
+        this._listaNegociacoes.esvazia();
+        this._negociacoesView.update(this._listaNegociacoes);
+
+        this._mensagem.texto = "Negociações apagadas com sucesso";
+
+        this._mensagemView.update(this._mensagem);
     }
 
     _criaNegociacao(){
