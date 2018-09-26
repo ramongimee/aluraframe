@@ -9,16 +9,12 @@ class NegociacaoController{
 
         let self = this;
 
-<<<<<<< HEAD
-        // this._listaNegociacoes = 
-=======
         this._listaNegociacoes = ProxyFactory.create(
             new ListaNegociacao(),
             ['adiciona','esvazia'],
             (model) =>{
                 this._negociacoesView.update(model);
             });
->>>>>>> 11a40649280bb3e4a5dd3538f707b9bd3946f5ad
 
         this._negociacoesView = new NegociacoesView($('#negociacoesView'));
         this._negociacoesView.update(this._listaNegociacoes);
