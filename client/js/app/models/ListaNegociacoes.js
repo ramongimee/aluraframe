@@ -12,6 +12,14 @@ class ListaNegociacoes{
         
     }
 
+    ordena(criterio){
+        this._negociacoes.sort(criterio);
+    }
+
+    inverteOrdem(){
+        this._negociacoes.reverse();
+    }
+
     get negociacoes(){
 
         return [].concat(this._negociacoes);
